@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boom/Pods-Boom.release.xcconfig"; sourceTree = "<group>"; };
 		528343A220BFE7E100EA3910 /* Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528343A520BFE7E100EA3910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		528343A620BFE7E100EA3910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		528343B120BFE7E200EA3910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528343B320BFE7E200EA3910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528343B420BFE7E200EA3910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boom/Pods-Boom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,8 @@
 			children = (
 				528343A420BFE7E100EA3910 /* Boom */,
 				528343A320BFE7E100EA3910 /* Products */,
+				B4F17D8DE14F526F87325981 /* Pods */,
+				EA094BC8A763DEA6FF8306A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +75,22 @@
 			path = Boom;
 			sourceTree = "<group>";
 		};
+		B4F17D8DE14F526F87325981 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */,
+				3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA094BC8A763DEA6FF8306A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 528343B820BFE7E200EA3910 /* Build configuration list for PBXNativeTarget "Boom" */;
 			buildPhases = (
+				1C881701906C6AF43D05345A /* [CP] Check Pods Manifest.lock */,
 				5283439E20BFE7E100EA3910 /* Sources */,
 				5283439F20BFE7E100EA3910 /* Frameworks */,
 				528343A020BFE7E100EA3910 /* Resources */,
+				0C34AB3725B1A9CD8E2E4DAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +157,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C34AB3725B1A9CD8E2E4DAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boom/Pods-Boom-frameworks.sh",
+				"${PODS_ROOT}/../../../Boomware.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Boomware.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boom/Pods-Boom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C881701906C6AF43D05345A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5283439E20BFE7E100EA3910 /* Sources */ = {
@@ -281,6 +342,7 @@
 		};
 		528343B920BFE7E200EA3910 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +361,7 @@
 		};
 		528343BA20BFE7E200EA3910 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
