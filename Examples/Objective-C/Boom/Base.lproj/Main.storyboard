@@ -1,30 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PxJ-U3-qze">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="s7T-ih-kU4">
+            <objects>
+                <navigationController id="PxJ-U3-qze" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jCw-Ta-osy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lI2-9x-Bqf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxl-nP-xV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-690" y="134"/>
+        </scene>
+        <!--Phone View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PhoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TW6-pr-bdB"/>
-                        <viewControllerLayoutGuide type="bottom" id="M3E-nt-j0R"/>
+                        <viewControllerLayoutGuide type="top" id="ZAn-iE-DTv"/>
+                        <viewControllerLayoutGuide type="bottom" id="MJ6-Us-qO3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-qf-ZLm">
+                                <rect key="frame" x="50" y="212" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qh7-qV-D6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="actionGo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1os-1J-IDF"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-PV-6kj">
+                                <rect key="frame" x="50" y="94" width="275" height="29"/>
+                                <segments>
+                                    <segment title="SMS"/>
+                                    <segment title="Voice"/>
+                                    <segment title="Flash"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-76-unb">
+                                <rect key="frame" x="50" y="142" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CKT-76-unb" firstAttribute="top" secondItem="hdf-PV-6kj" secondAttribute="bottom" constant="20" id="0lf-hm-fVO"/>
+                            <constraint firstItem="CKT-76-unb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="EVs-EH-EMq"/>
+                            <constraint firstAttribute="trailing" secondItem="CKT-76-unb" secondAttribute="trailing" constant="50" id="TME-Xv-bLb"/>
+                            <constraint firstItem="wtJ-qf-ZLm" firstAttribute="top" secondItem="CKT-76-unb" secondAttribute="bottom" constant="40" id="U34-rg-ayW"/>
+                            <constraint firstItem="hdf-PV-6kj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="Y56-tx-1mq"/>
+                            <constraint firstItem="hdf-PV-6kj" firstAttribute="top" secondItem="ZAn-iE-DTv" secondAttribute="bottom" constant="30" id="YJM-im-Jaj"/>
+                            <constraint firstAttribute="trailing" secondItem="hdf-PV-6kj" secondAttribute="trailing" constant="50" id="f79-Wk-1cy"/>
+                            <constraint firstAttribute="trailing" secondItem="wtJ-qf-ZLm" secondAttribute="trailing" constant="50" id="vfE-fh-vgc"/>
+                            <constraint firstItem="wtJ-qf-ZLm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="wC2-oo-DiO"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1BU-xj-1tT"/>
+                    <connections>
+                        <outlet property="phoneField" destination="CKT-76-unb" id="rCc-dy-jyL"/>
+                        <outlet property="segmentedControl" destination="hdf-PV-6kj" id="4P8-I1-a6l"/>
+                        <segue destination="kme-K5-Tlw" kind="show" identifier="PINSegue" id="6sn-Vw-8e8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="lhc-W4-Grn">
+            <objects>
+                <viewController id="kme-K5-Tlw" customClass="CodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VHZ-nm-L9k"/>
+                        <viewControllerLayoutGuide type="bottom" id="U3N-Hi-4OB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c79-Zq-uQo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PIN Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0i-8p-F17">
+                                <rect key="frame" x="50" y="144" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3E-eD-Wca">
+                                <rect key="frame" x="50" y="214" width="275" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a2o-xL-4Y9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Check Code"/>
+                                <connections>
+                                    <action selector="actionCheckCode:" destination="kme-K5-Tlw" eventType="touchUpInside" id="zN0-cd-dk4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O0i-8p-F17" firstAttribute="top" secondItem="VHZ-nm-L9k" secondAttribute="bottom" constant="80" id="DGo-RW-h2b"/>
+                            <constraint firstItem="O0i-8p-F17" firstAttribute="leading" secondItem="c79-Zq-uQo" secondAttribute="leading" constant="50" id="Esg-hn-4c4"/>
+                            <constraint firstAttribute="trailing" secondItem="r3E-eD-Wca" secondAttribute="trailing" constant="50" id="Pdm-5e-I6I"/>
+                            <constraint firstItem="r3E-eD-Wca" firstAttribute="leading" secondItem="c79-Zq-uQo" secondAttribute="leading" constant="50" id="T1M-sg-e2R"/>
+                            <constraint firstAttribute="trailing" secondItem="O0i-8p-F17" secondAttribute="trailing" constant="50" id="XMJ-1K-HFj"/>
+                            <constraint firstItem="r3E-eD-Wca" firstAttribute="top" secondItem="O0i-8p-F17" secondAttribute="bottom" constant="40" id="zMf-z7-ZIh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="codeField" destination="O0i-8p-F17" id="B4A-5v-kUQ"/>
+                        <segue destination="k4d-d5-tG3" kind="show" identifier="SuccessSegue" id="1nt-V2-RLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecN-Lp-Hvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018" y="134"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SKP-81-mls">
+            <objects>
+                <viewController id="k4d-d5-tG3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ax-PU-1Gu"/>
+                        <viewControllerLayoutGuide type="bottom" id="GVA-JU-nTF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N5p-Sz-DJa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plg-C8-D1e">
+                                <rect key="frame" x="50" y="124" width="275" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Plg-C8-D1e" firstAttribute="leading" secondItem="N5p-Sz-DJa" secondAttribute="leading" constant="50" id="aNM-PE-Gfo"/>
+                            <constraint firstAttribute="trailing" secondItem="Plg-C8-D1e" secondAttribute="trailing" constant="50" id="adf-Db-sZC"/>
+                            <constraint firstItem="Plg-C8-D1e" firstAttribute="top" secondItem="7Ax-PU-1Gu" secondAttribute="bottom" constant="60" id="pgK-f0-3dZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kt8-1t-kAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="134"/>
         </scene>
     </scenes>
 </document>
