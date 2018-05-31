@@ -69,3 +69,26 @@ NSString *PINCode = @"7777";
 }];
 ```
 
+#### Handling Push Notifications
+
+Set a device token to Boomware SDK
+
+```objective-c
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Set device token
+    [BWBoomware setDeviceToken:deviceToken];
+}
+```
+
+Handle remote notification
+
+```objective-c
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    // Check that the notification send by boomware
+    if ([BWBoomware isBoomwarePushNotification:userInfo]) {
+        // Handle it
+        [BWBoomware handlePushNotification:userInfo];
+    }
+}
+```
+
