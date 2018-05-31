@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Boomware/Boomware.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    [BWBoomware setKey:@"key:private:private"];
+    [BWBoomware verifyNumber:@"number" method:BWBoomwareMethodSMS completion:^(NSError * _Nullable error) {
+        NSLog(@"errror %@", error);
+    }];
+    NSLog(@"Launched");
+
     return YES;
 }
 
