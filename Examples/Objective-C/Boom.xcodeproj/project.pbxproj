@@ -13,10 +13,12 @@
 		528343AF20BFE7E200EA3910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528343AE20BFE7E200EA3910 /* Assets.xcassets */; };
 		528343B220BFE7E200EA3910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528343B020BFE7E200EA3910 /* LaunchScreen.storyboard */; };
 		528343B520BFE7E200EA3910 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 528343B420BFE7E200EA3910 /* main.m */; };
+		E4DD247259AD5C62D9B69DC8 /* Pods_Boom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C319CB447E49BD85613AF4 /* Pods_Boom.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boom/Pods-Boom.release.xcconfig"; sourceTree = "<group>"; };
+		49C319CB447E49BD85613AF4 /* Pods_Boom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		528343A220BFE7E100EA3910 /* Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528343A520BFE7E100EA3910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		528343A620BFE7E100EA3910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DD247259AD5C62D9B69DC8 /* Pods_Boom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +90,7 @@
 		EA094BC8A763DEA6FF8306A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49C319CB447E49BD85613AF4 /* Pods_Boom.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,11 +170,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Boom/Pods-Boom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${PODS_ROOT}/../../../Boomware.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Boomware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
