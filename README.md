@@ -22,9 +22,6 @@ pod 'Boomware'
 end
 ```
 
-`use_frameworks!` Required option
-
-
 Then, run the following command:
 
 ```bash
