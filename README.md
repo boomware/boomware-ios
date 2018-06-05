@@ -2,15 +2,9 @@
 
 ## Installation with CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like AFNetworking in your projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
 #### Podfile
 
-To integrate VerifireKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate Boomware into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
