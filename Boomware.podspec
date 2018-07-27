@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 s.name 			= 'Boomware'
-s.version 		= '1.0'
+s.version 		= '1.1'
 s.summary 		= 'Phone number verification'
-s.homepage 		= 'https://github.com/Boomware/Boomware-ios'
+s.homepage 		= 'https://github.com/boomware/boomware-ios'
 s.documentation_url = 'https://boomware.com/'
 s.license 		= { :type => 'Custom', :file => 'LICENSE' }
 s.author 		= { 'Sergey Popov' => 'serj@boomware.com' }
 
-s.source 		= { :http => "https://github.com/Boomware/boomware-ios/releases/download/#{s.version}/Boomware.tar.gz" }
+s.source 		= { :http => "https://github.com/boomware/boomware-ios/archive/#{s.version}.tar.gz" }
 
 s.requires_arc	= true
 s.platform		= :ios, '8.0'
