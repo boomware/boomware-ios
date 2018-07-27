@@ -7,7 +7,7 @@ s.documentation_url = 'https://boomware.com/'
 s.license 		= { :type => 'Custom', :file => 'LICENSE' }
 s.author 		= { 'Sergey Popov' => 'serj@boomware.com' }
 
-s.source 		= { :http => "https://github.com/Boomware/boomware-ios/releases/download/#{s.version}/Boomware.tar.gz" }
+s.source 		= { :http => "https://github.com/boomware/boomware-ios/releases/download/#{s.version}/Boomware.tar.gz" }
 
 s.requires_arc	= true
 s.platform		= :ios, '8.0'
