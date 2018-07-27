@@ -18,6 +18,15 @@
 
 @implementation PhoneViewController
 
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Remvoe device data", nil) style:UIBarButtonItemStylePlain target:self action:@selector(actionRemoveDeviceData:)];
+}
+
 #pragma mark - Actions
 
 - (IBAction)actionGo:(id)sender
@@ -37,6 +46,28 @@
             [weakSelf.navigationController presentViewController:alert animated:YES completion:nil];
         }
         
+    }];
+}
+
+- (IBAction)actionRemoveDeviceData:(id)sender
+{
+    __weak __typeof(self) weakSelf = self;
+    [BWBoomware removeDataWithCompletion:^(NSError * _Nullable error) {
+
+        if (error)
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", nil) message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:action];
+            [weakSelf.navigationController presentViewController:alert animated:YES completion:nil];
+        }
+        else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Success", nil) message:NSLocalizedString(@"Device removed", nil) preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *action = [UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleCancel handler:nil];
+            [alert addAction:action];
+            [weakSelf.navigationController presentViewController:alert animated:YES completion:nil];
+        }
     }];
 }
 
