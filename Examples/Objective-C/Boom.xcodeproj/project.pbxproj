@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C65D5B796D1F68982174B9F /* Pods_Boom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87DD2BC2D216853BD5D2077F /* Pods_Boom.framework */; };
+		5238CB4020C0533B00EA3356 /* PhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238CB3C20C0533A00EA3356 /* PhoneViewController.m */; };
+		5238CB4120C0533B00EA3356 /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5238CB3F20C0533B00EA3356 /* CodeViewController.m */; };
 		528343A720BFE7E100EA3910 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 528343A620BFE7E100EA3910 /* AppDelegate.m */; };
-		528343AA20BFE7E100EA3910 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 528343A920BFE7E100EA3910 /* ViewController.m */; };
 		528343AD20BFE7E100EA3910 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528343AB20BFE7E100EA3910 /* Main.storyboard */; };
 		528343AF20BFE7E200EA3910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528343AE20BFE7E200EA3910 /* Assets.xcassets */; };
 		528343B220BFE7E200EA3910 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528343B020BFE7E200EA3910 /* LaunchScreen.storyboard */; };
@@ -16,16 +18,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Boom/Pods-Boom.release.xcconfig"; sourceTree = "<group>"; };
+		5238CB3B20C051C200EA3356 /* Boom.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Boom.entitlements; sourceTree = "<group>"; };
+		5238CB3C20C0533A00EA3356 /* PhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneViewController.m; sourceTree = "<group>"; };
+		5238CB3D20C0533B00EA3356 /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
+		5238CB3E20C0533B00EA3356 /* PhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneViewController.h; sourceTree = "<group>"; };
+		5238CB3F20C0533B00EA3356 /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		528343A220BFE7E100EA3910 /* Boom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528343A520BFE7E100EA3910 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		528343A620BFE7E100EA3910 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		528343A820BFE7E100EA3910 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		528343A920BFE7E100EA3910 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		528343AC20BFE7E100EA3910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		528343AE20BFE7E200EA3910 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		528343B120BFE7E200EA3910 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528343B320BFE7E200EA3910 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528343B420BFE7E200EA3910 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87DD2BC2D216853BD5D2077F /* Pods_Boom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Boom/Pods-Boom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C65D5B796D1F68982174B9F /* Pods_Boom.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				528343A420BFE7E100EA3910 /* Boom */,
 				528343A320BFE7E100EA3910 /* Products */,
+				B4F17D8DE14F526F87325981 /* Pods */,
+				EA094BC8A763DEA6FF8306A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +69,13 @@
 		528343A420BFE7E100EA3910 /* Boom */ = {
 			isa = PBXGroup;
 			children = (
+				5238CB3B20C051C200EA3356 /* Boom.entitlements */,
 				528343A520BFE7E100EA3910 /* AppDelegate.h */,
 				528343A620BFE7E100EA3910 /* AppDelegate.m */,
-				528343A820BFE7E100EA3910 /* ViewController.h */,
-				528343A920BFE7E100EA3910 /* ViewController.m */,
+				5238CB3D20C0533B00EA3356 /* CodeViewController.h */,
+				5238CB3F20C0533B00EA3356 /* CodeViewController.m */,
+				5238CB3E20C0533B00EA3356 /* PhoneViewController.h */,
+				5238CB3C20C0533A00EA3356 /* PhoneViewController.m */,
 				528343AB20BFE7E100EA3910 /* Main.storyboard */,
 				528343AE20BFE7E200EA3910 /* Assets.xcassets */,
 				528343B020BFE7E200EA3910 /* LaunchScreen.storyboard */,
@@ -71,6 +85,23 @@
 			path = Boom;
 			sourceTree = "<group>";
 		};
+		B4F17D8DE14F526F87325981 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */,
+				3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA094BC8A763DEA6FF8306A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87DD2BC2D216853BD5D2077F /* Pods_Boom.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 528343B820BFE7E200EA3910 /* Build configuration list for PBXNativeTarget "Boom" */;
 			buildPhases = (
+				1C881701906C6AF43D05345A /* [CP] Check Pods Manifest.lock */,
 				5283439E20BFE7E100EA3910 /* Sources */,
 				5283439F20BFE7E100EA3910 /* Frameworks */,
 				528343A020BFE7E100EA3910 /* Resources */,
+				38EED5BCDEE400C24289C302 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -102,6 +135,17 @@
 				TargetAttributes = {
 					528343A120BFE7E100EA3910 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,12 +180,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C881701906C6AF43D05345A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Boom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38EED5BCDEE400C24289C302 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Boom/Pods-Boom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${PODS_ROOT}/../../../Boomware.framework",
+				"${BUILT_PRODUCTS_DIR}/UICKeyChainStore/UICKeyChainStore.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Boomware.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICKeyChainStore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Boom/Pods-Boom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5283439E20BFE7E100EA3910 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528343AA20BFE7E100EA3910 /* ViewController.m in Sources */,
+				5238CB4120C0533B00EA3356 /* CodeViewController.m in Sources */,
+				5238CB4020C0533B00EA3356 /* PhoneViewController.m in Sources */,
 				528343B520BFE7E200EA3910 /* main.m in Sources */,
 				528343A720BFE7E100EA3910 /* AppDelegate.m in Sources */,
 			);
@@ -281,12 +369,14 @@
 		};
 		528343B920BFE7E200EA3910 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD754ABBFB80C1E1306DB599 /* Pods-Boom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boom/Boom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVHZGUG393;
 				INFOPLIST_FILE = Boom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,12 +389,14 @@
 		};
 		528343BA20BFE7E200EA3910 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3372CC4D2EE151442F9DF2D9 /* Pods-Boom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Boom/Boom.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVHZGUG393;
 				INFOPLIST_FILE = Boom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

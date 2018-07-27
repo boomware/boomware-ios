@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  CodeViewController.h
 //  Boom
 //
 //  Created by Sergey P on 31.05.2018.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface CodeViewController : UIViewController
 
 @end
-

@@ -1,3 +1,8 @@
+//
+//  Boomware.h
+//  Boomware
+//
+//  Created by Sergey P on 15.08.17.
 //  Copyright © 2018 Boomware (http://boomware.com/). All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -16,3 +21,5 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+
+#import "BWBoomware.h"

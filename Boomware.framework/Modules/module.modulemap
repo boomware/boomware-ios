@@ -1,0 +1,6 @@
+framework module Boomware {
+  umbrella header "Boomware.h"
+
+  export *
+  module * { export * }
+}
