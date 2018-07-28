@@ -28,7 +28,7 @@ $ pod install
 ```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Init Boomware SDK
-    [BWBoomware setKey:@"youkey:youkey:youkey"];
+    [BWBoomware setKey:@"48868d4f42e1a29ec0134d254:42e1a29ec0134d254d:8f9ad63d594685df7d"];
     return YES;
 }
 ```
