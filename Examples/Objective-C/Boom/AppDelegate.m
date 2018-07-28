@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Init Boomware SDK
-    [BWBoomware setKey:@"youkey:youkey:youkey"];
+    [BWBoomware setKey:@"<#sdk key#>"];
     return YES;
 }
 
