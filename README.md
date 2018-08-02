@@ -1,5 +1,8 @@
 # Boomware
 
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Boomware.svg)](https://img.shields.io/cocoapods/v/Boomware.svg)
+[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 ## Installation with CocoaPods
 
 #### Podfile
@@ -21,6 +24,28 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+
+### Installation with Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate Boomware into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "boomware/boomware-ios"
+github "AFNetworking/AFNetworking" ~> 3.0
+github "kishikawakatsumi/UICKeyChainStore"
+```
+
+Run `carthage` to build frameworks and drag frameworks `Boomware.framework`, `AFNetworking.framework` and `UICKeyChainStore.framework` into your Xcode project.
+Probably you have to add `$(SRCROOT)/Carthage/Build/iOS/` to `Build Settings` -> `Runpath Search Paths`
 
 ## Usage
 
