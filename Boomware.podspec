@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name 			= 'Boomware'
-s.version 		= '1.6'
+s.version 		= '1.7'
 s.summary 		= 'Phone number verification'
 s.homepage 		= 'https://github.com/boomware/boomware-ios'
 s.license 		= { :type => 'Custom', :file => 'LICENSE' }
