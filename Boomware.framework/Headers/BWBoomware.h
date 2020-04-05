@@ -36,8 +36,8 @@ typedef enum : NSUInteger
 }
 BWBoomwareMethod;
 
-- (nullable instancetype)init NS_UNAVAILABLE;
-+ (nullable instancetype)new NS_UNAVAILABLE;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 /*!
  * Default method to init SDK
@@ -98,6 +98,11 @@ BWBoomwareMethod;
  * The method is removeing all the data
  */
 + (void)removeDataWithCompletion:(nonnull void (^)(NSError *_Nullable error))callback;
+
+/*!
+ * Track event
+ */
++ (void)eventWithName:(nonnull NSString *)name attributes:(nullable NSDictionary *)attributes;
 
 @end
 
