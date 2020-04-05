@@ -21,7 +21,7 @@ class CodeViewController: UIViewController {
                 let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
                 let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 alert.addAction(action)
-                self.show(alert, sender: sender)
+                self.present(alert, animated: true, completion: nil)
             } else {
 
                 self.performSegue(withIdentifier: "SuccessSegue", sender: nil)
