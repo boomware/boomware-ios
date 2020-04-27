@@ -26,6 +26,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class BWParams;
+
 @interface BWBoomware : NSObject
 
 typedef enum : NSUInteger
@@ -41,22 +43,30 @@ BWBoomwareMethod;
 
 /*!
  * Default method to init SDK
- * @param key is a requered developer key. More info on https://boomware.com/
+ * @param key is a required developer key. More info on https://boomware.com/
  */
 + (void)setKey:(nonnull NSString *)key;
 
 /*!
- * To begin phone number verification call the methdo with phone number and method.
- * @param phoneNumber is a valid phone number in internation E164 format example: +1234567890
- * @param method one of the requered methods `BWBoomwareMethodSMS`, `BWBoomwareMethodVoice`, `BWBoomwareMethodCall`
+ * To begin phone number verification call the method with phone number and method.
+ * @param phoneNumber is a valid phone number in international E164 format example: +1234567890
+ * @param method one of the required methods `BWBoomwareMethodSMS`, `BWBoomwareMethodVoice`, `BWBoomwareMethodCall`
  * @param callback is a block to handle the result of requested verification. If the `error` is nil verification request succeeded.
  */
 + (void)verifyNumber:(nonnull NSString *)phoneNumber method:(BWBoomwareMethod)method
           completion:(nonnull void (^)(NSError *_Nullable error))callback NS_SWIFT_NAME(verify(number:method:completion:));
 
 /*!
- * To complete the verification call the method with a PIN `code`. And receive reuslt of the verification.
- * @param code - is a PIN code send by chosen method earlier. In case `call` it 4 last digits CLI of the incomming call.
+ * Customized version of verifyNumber
+ * @param params configuration of verification params
+ * @param callback is a block to handle the result of requested verification. If the `error` is nil verification request succeeded.
+*/
++ (void)verifyParams:(nonnull BWParams *)params
+          completion:(void (^)(NSError * _Nullable))callback NS_SWIFT_NAME(verify(params:completion:));
+
+/*!
+ * To complete the verification call the method with a PIN `code`. And receive result of the verification.
+ * @param code - is a PIN code send by chosen method earlier. In case `call` it 4 last digits CLI of the incoming call.
  * @param callback - is handling the result of verification, if `error` is nil the verification was successfully completed and phone number is verified.
  * `requestId` is a unique id of the current verification it can be used to check the number on a backend REST method `/verify/info` more on https://boomware.com/
  */
@@ -64,12 +74,12 @@ BWBoomwareMethod;
              completion:(nonnull void (^)(NSString *_Nullable phoneNumber, NSString *_Nullable requestId, NSError *_Nullable error))callback NS_SWIFT_NAME(confirm(code:completion:));
 
 /*!
- * Verified phone number or number that you set for sdk
+ * Verified phone number or number that you set for SDK
  */
 + (nullable NSString *)phoneNumber;
 
 /*!
- * Use this method to set a phone number in casess when verification is not applicable
+ * Use this method to set a phone number in case when verification is not applicable
  * @param phoneNumber is a valid phone number is E164 format example: +1234567890
  */
 + (void)setPhoneNumber:(nonnull NSString *)phoneNumber;
@@ -95,7 +105,7 @@ BWBoomwareMethod;
 + (BOOL)isBoomwarePushNotification:(nonnull NSDictionary *)userInfo;
 
 /*!
- * The method is removeing all the data
+ * The method is removing all the data
  */
 + (void)removeDataWithCompletion:(nonnull void (^)(NSError *_Nullable error))callback;
 
@@ -108,7 +118,7 @@ BWBoomwareMethod;
 
 typedef enum : NSUInteger
 {
-    BWBoomwareErrorUnkonwn = 0,
+    BWBoomwareErrorUnknown = 0,
     BWBoomwareErrorInvalidCode,
     BWBoomwareErrorInvalidPhoneNumber,
 }
