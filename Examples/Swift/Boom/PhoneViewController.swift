@@ -18,7 +18,17 @@ class PhoneViewController: UIViewController
     // MARK: Actions
     
     @IBAction func actionGo(_ sender: Any) {
-        BWBoomware.verify(number: self.phoneField.text!, method: self.selectedVerificationMethod()) { (error) in
+        guard let number = self.phoneField.text else {
+            return
+        }
+
+        guard let params = BWParams(method: self.selectedVerificationMethod(), phoneNumber: number) else {
+            return
+        }
+
+        params.from = nil
+
+        BWBoomware.verify(params: params) { (error) in
             if let err = error as NSError? {
                 let alert = UIAlertController(title: "Error", message: err.localizedDescription, preferredStyle: .alert)
                 let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -32,18 +42,18 @@ class PhoneViewController: UIViewController
     }
     
     // MARK: Private
-    private func selectedVerificationMethod() -> BWBoomwareMethod
+    private func selectedVerificationMethod() -> String
     {
         switch segmentedControl.selectedSegmentIndex
         {
         case 0:
-            return BWBoomwareMethodSMS
+            return BWParamsMethodSMS
             
         case 1:
-            return BWBoomwareMethodVoice
+            return BWParamsMethodVoice
             
         default:
-            return BWBoomwareMethodCall
+            return BWParamsMethodCall
         }
     }
 
